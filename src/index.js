@@ -1,3 +1,4 @@
+// import React from 'react';
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -94,11 +95,13 @@ import './index.css';
 //   )
 // }
 
-const Display = ({counter}) => <div> {counter} </div>
-const Button = ({eventHandler, text}) => <button onClick={eventHandler}> {text} </button>
+// const Display = ({counter}) => <div> {counter} </div>
+// const Button = ({eventHandler, text}) => <button onClick={eventHandler}> {text} </button>
 
-const App = () => {
-  const [counter, setCounter] = useState(60)
+
+
+// const App = () => {
+//   const [counter, setCounter] = useState(60)
   // const {counter} = props
 
   // setTimeout(
@@ -108,26 +111,26 @@ const App = () => {
   //   1000
   // )
 
-  const decreaseByOne = () => setCounter(counter - 1)
-  const setToSixty = () => setCounter(60)
+  // const decreaseByOne = () => setCounter(counter - 1)
+  // const setToSixty = () => setCounter(60)
 
   // const decreaseByOne = () => {
   //   console.log('clicked', 60-counter+1, 'times')
   //   setCounter(counter -1)
   // }
   
-  return (
-    <div>
-      <Display counter = {counter} />
-      {/* <button onClick = {decreaseByOne}> Decrease by one </button>
-      <button onClick = {setToSixty}> Reset </button> */}
+//   return (
+//     <div>
+//       <Display counter = {counter} />
+//       {/* <button onClick = {decreaseByOne}> Decrease by one </button>
+//       <button onClick = {setToSixty}> Reset </button> */}
 
-      <Button eventHandler = {decreaseByOne} text = {"Decrease by one"} />
-      <Button eventHandler = {setToSixty} text = {"Reset"} />
+//       <Button eventHandler = {decreaseByOne} text = {"Decrease by one"} />
+//       <Button eventHandler = {setToSixty} text = {"Reset"} />
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
 // let counter = 60
 
@@ -138,6 +141,73 @@ const App = () => {
 //     </React.StrictMode>,
 //     document.getElementById('root')
 //   );
+// }
+
+
+//  LowerCase and UpperCase
+
+// const setTitle = ({useState}) => <div> {useState} </div>
+const Button = ({eventHandler, text}) => <button onClick={eventHandler}> {text} </button>
+
+const App = () => {
+  const [title, setTitle] = useState("Fundamentals of Computer Science")
+
+  const code = "COMP1010"
+  // const title = "Fundamentals of Computer Science"
+
+  const upTitle = () => setTitle(title.toUpperCase())
+  const downTitle = () => setTitle(title.toLowerCase())
+
+  console.log(upTitle)
+
+
+  return (
+    <div>
+      <p>Unit {code} {title}</p>
+
+      <Button eventHandler = {upTitle} text = {"Up"} />
+      <Button eventHandler = {downTitle} text = {"Down"} />
+    </div>
+  )
+}
+
+
+
+
+// const Unit = (props) => {
+    
+//     return (
+//       <div>
+//         <p>Unit {props.code} {props.title} </p>
+//       </div>
+//     )
+//   }
+
+  
+
+// const Button = ({eventHandler, text}) => <button onClick={eventHandler}> {text} </button>
+
+// const App = () => {
+//   const setTitle
+  
+//   const code = ["COMP1010", "COMP1750", "COMP2110", "COMP2750", "MMCC2045", "COMP3120", "COMP3130"]
+//   const title = ["Fundamentals of Computer Science", "Introduction to Business Information Systems", "Web Technology", "Applications Modelling and Development", "Interactive Web Design", "Advanced Web Development", "Mobile Application Development"]
+  
+
+//   const Uppercase = () => setTitle.toUpperCase()
+//   const Lowercase = () => setTitle.toLowerCase()
+
+//   return (
+//     <div>
+//       <Unit code = {code[0]} title = {title[0]}/> <Button eventHandler = {Uppercase} text = {"Up"}/>  <Button eventHandler = {Lowercase} text = {"Down"}/>   
+//       <Unit code = {code[1]} title = {title[1]}/>
+//       <Unit code = {code[2]} title = {title[2]}/>
+//       <Unit code = {code[3]} title = {title[3]}/>
+//       <Unit code = {code[4]} title = {title[4]}/>
+//       <Unit code = {code[5]} title = {title[5]}/>
+//       <Unit code = {code[6]} title = {title[6]}/>
+//     </div>
+//   )
 // }
 
 ReactDOM.render(
